@@ -24,8 +24,8 @@ The facade adds no wording and no rendering step: PDF and SVG are byte-identical
 
 - `tests/render_parity.rs`: the CareerVector typst-parity fixtures, facade vs direct engine, plus
   committed digests (`CTYP_BLESS=1` regenerates them deliberately);
-- `tests/measure_parity.rs`: the ctypst-measure-v1 vectors, facade vs direct client;
-- `tests/correspondence.rs`: every cletter conformance vector replayed through `ctyp`.
+- `tests/measure_parity.rs`: the ctypst-measure-v1 vectors (from ctypst's `conformance` feature), facade vs direct client;
+- `tests/correspondence.rs`: every cletter conformance vector (cletter's `conformance` feature) replayed through `ctyp`.
 
 ## WASM
 

@@ -333,8 +333,7 @@ dependencies = [
 [[package]]
 name = "cletter"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ba3d6afb327e3519485aaa341809a7464b6376d1f8d9dc25268f7c71e30b263"
+source = "git+https://git.corbet.ch/corbet-libre/cletter.git?branch=main#0427f04c17ca5953accbf49365e8b75596a90100"
 dependencies = [
  "cdate",
  "cink",
@@ -538,8 +537,7 @@ dependencies = [
 [[package]]
 name = "ctypst"
 version = "0.3.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "884715c97b6ea7ceb29ef6b8885355854a1212c002cfc2f71412facb80048224"
+source = "git+https://git.corbet.ch/corbet-fsl/ctypst.git?branch=main#1d2e1dc3a9c7c91fd3f27ed45f6af4983a6c93ce"
 dependencies = [
  "serde",
  "serde_json",

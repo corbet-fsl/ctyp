@@ -35,7 +35,14 @@ thiserror = "2.0"
 wasm-bindgen = { version = "0.2", optional = true }
 
 [dev-dependencies]
-ctypst = { version = "0.3", default-features = false, features = ["document-fonts", "pdf", "svg", "measure"] }
+cletter = { version = "0.4", features = ["conformance"] }
+ctypst = { version = "0.3", default-features = false, features = ["document-fonts", "pdf", "svg", "measure", "conformance"] }
+
+# Until the next cletter and ctypst releases carry the `conformance` feature, take them from their
+# git main (first-party libraries roll on main). Delete this table after those releases.
+[patch.crates-io]
+cletter = { git = "https://git.corbet.ch/corbet-libre/cletter.git", branch = "main" }
+ctypst = { git = "https://git.corbet.ch/corbet-fsl/ctypst.git", branch = "main" }
 
 [lints.rust]
 unsafe_code = "forbid"
