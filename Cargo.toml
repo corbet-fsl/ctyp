@@ -7,7 +7,6 @@ description = "Document library over ctypst and cletter: papers, fonts, blocks, 
 license = "FSL-1.1-ALv2"
 repository = "https://git.corbet.ch/corbet-fsl/ctyp"
 readme = "README.md"
-publish = false
 
 [lib]
 crate-type = ["rlib"]
@@ -26,8 +25,8 @@ format = ["ctypst/format"]
 wasm = ["ctypst/wasm", "pdf", "svg", "measure", "dep:wasm-bindgen"]
 
 [dependencies]
-cletter = "0.4"
-ctypst = { version = "0.3", default-features = false, features = ["document-fonts"] }
+cletter = "0.4.4"
+ctypst = { version = "0.3.6", default-features = false, features = ["document-fonts"] }
 lopdf = { version = "0.44", optional = true, default-features = false }
 regex = { version = "1.12", optional = true }
 serde_json = "1.0"
@@ -35,14 +34,8 @@ thiserror = "2.0"
 wasm-bindgen = { version = "0.2", optional = true }
 
 [dev-dependencies]
-cletter = { version = "0.4", features = ["conformance"] }
-ctypst = { version = "0.3", default-features = false, features = ["document-fonts", "pdf", "svg", "measure", "conformance"] }
-
-# Until the next cletter and ctypst releases carry the `conformance` feature, take them from their
-# git main (first-party libraries roll on main). Delete this table after those releases.
-[patch.crates-io]
-cletter = { git = "https://git.corbet.ch/corbet-libre/cletter.git", branch = "main" }
-ctypst = { git = "https://git.corbet.ch/corbet-fsl/ctypst.git", branch = "main" }
+cletter = { version = "0.4.4", features = ["conformance"] }
+ctypst = { version = "0.3.6", default-features = false, features = ["document-fonts", "pdf", "svg", "measure", "conformance"] }
 
 [lints.rust]
 unsafe_code = "forbid"
